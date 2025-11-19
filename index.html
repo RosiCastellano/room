@@ -3,10 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lady Eaton Annex Floor Plans</title>
+    <title>Lady Eaton Floor Plans</title>
   </head>
   <body style="margin: 0; padding: 0;">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+```
+
+5. Scroll down and click **"Commit changes"**
+
+---
+
+**Wait, that should already be correct...** Let me check your actual repo structure. Can you show me a screenshot of your GitHub repository file list? Or check if:
+
+1. There's a `src` folder visible in your repo
+2. Inside `src`, there's `App.jsx` and `main.jsx`
+
+The files **must** be in this exact structure:
+```
+/
+├── index.html
+├── package.json
+├── src/           ← FOLDER
+│   ├── App.jsx    ← FILE INSIDE src
+│   └── main.jsx   ← FILE INSIDE src
+└── vite.config.js
