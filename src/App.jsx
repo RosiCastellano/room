@@ -458,19 +458,19 @@ const FloorPlanApp = () => {
           Why Vertical Communities for Lady Eaton North?
         </h3>
         <p style={{ fontSize: '18px', lineHeight: '1.6', marginBottom: '20px', color: '#374151' }}>
-          I recommend a <strong>vertical left/right division</strong> for Lady Eaton North, splitting the building down the middle. Each don manages the left or right side of <strong>both the 2nd and 3rd floors</strong>.
+          I recommend a <strong>vertical West/East wing division</strong> for Lady Eaton North, splitting the building down the middle. Each don manages either the West Wing or East Wing of <strong>both the 2nd and 3rd floors</strong>.
         </p>
         <p style={{ fontSize: '18px', lineHeight: '1.6', marginBottom: '20px', color: '#374151' }}>
-          This creates <strong>perfect balance: 58 students per don</strong> (instead of 60 vs 56 with floor-based division). More importantly, both floors share a <strong>common room and laundry facilities</strong> - with vertical division, both dons have equal access to these shared spaces.
+          This creates <strong>perfect balance: 58 students per don</strong>. More importantly, both floors share a <strong>common room and laundry facilities</strong> - with vertical division, both dons have equal access to these shared spaces.
         </p>
         <p style={{ fontSize: '18px', lineHeight: '1.6', color: '#374151' }}>
-          Each don simply manages their side of the building - left (Red) or right (Yellow) - across both floors, ensuring fair access to all amenities and equal community sizes.
+          Additionally, vertical division improves <strong>fire safety and emergency evacuation</strong>. Students in each wing exit from opposite sides of the building, reducing congestion at any single exit point and ensuring faster, safer evacuation times in an emergency.
         </p>
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '20px', marginBottom: '30px' }}>
-        <div style={{ backgroundColor: '#FEE2E2', padding: '24px', borderRadius: '12px', borderLeft: '6px solid #DC2626' }}>
-          <h4 style={{ fontSize: '20px', fontWeight: 'bold', color: '#DC2626', marginBottom: '12px' }}>
+        <div style={{ backgroundColor: '#DBEAFE', padding: '24px', borderRadius: '12px', borderLeft: '6px solid #2563EB' }}>
+          <h4 style={{ fontSize: '20px', fontWeight: 'bold', color: '#2563EB', marginBottom: '12px' }}>
             ⚖️ Perfect Balance
           </h4>
           <p style={{ fontSize: '16px', color: '#374151' }}>
@@ -478,29 +478,38 @@ const FloorPlanApp = () => {
           </p>
         </div>
 
-        <div style={{ backgroundColor: '#FEF3C7', padding: '24px', borderRadius: '12px', borderLeft: '6px solid #F59E0B' }}>
-          <h4 style={{ fontSize: '20px', fontWeight: 'bold', color: '#92400E', marginBottom: '12px' }}>
+        <div style={{ backgroundColor: '#D1FAE5', padding: '24px', borderRadius: '12px', borderLeft: '6px solid #10B981' }}>
+          <h4 style={{ fontSize: '20px', fontWeight: 'bold', color: '#10B981', marginBottom: '12px' }}>
             🏠 Shared Facilities
           </h4>
           <p style={{ fontSize: '16px', color: '#374151' }}>
             Common room and laundry are shared between floors - vertical split ensures both dons have equal access.
           </p>
         </div>
+
+        <div style={{ backgroundColor: '#FEE2E2', padding: '24px', borderRadius: '12px', borderLeft: '6px solid #EF4444' }}>
+          <h4 style={{ fontSize: '20px', fontWeight: 'bold', color: '#EF4444', marginBottom: '12px' }}>
+            🔥 Fire Safety
+          </h4>
+          <p style={{ fontSize: '16px', color: '#374151' }}>
+            Students exit from opposite sides of the building, reducing congestion and improving emergency evacuation.
+          </p>
+        </div>
       </div>
 
       <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', marginTop: '40px', flexWrap: 'wrap' }}>
         <div style={{ backgroundColor: '#FEE2E2', padding: '30px 50px', borderRadius: '12px', textAlign: 'center', border: '3px solid #DC2626' }}>
-          <div style={{ fontSize: '28px', fontWeight: 'bold', color: '#DC2626' }}>🔴 RED SECTION</div>
+          <div style={{ fontSize: '28px', fontWeight: 'bold', color: '#DC2626' }}>◄ WEST WING</div>
           <div style={{ fontSize: '20px', color: '#374151', marginTop: '12px', fontWeight: 'bold' }}>Left Side</div>
-          <div style={{ fontSize: '18px', color: '#6B7280', marginTop: '8px' }}>2nd Floor Left: 30 students</div>
-          <div style={{ fontSize: '18px', color: '#6B7280', marginTop: '4px' }}>3rd Floor Left: 28 students</div>
+          <div style={{ fontSize: '18px', color: '#6B7280', marginTop: '8px' }}>2nd Floor West: 30 students</div>
+          <div style={{ fontSize: '18px', color: '#6B7280', marginTop: '4px' }}>3rd Floor West: 28 students</div>
           <div style={{ fontSize: '20px', color: '#DC2626', marginTop: '12px', fontWeight: 'bold' }}>Total: 58 students</div>
         </div>
         <div style={{ backgroundColor: '#FEF3C7', padding: '30px 50px', borderRadius: '12px', textAlign: 'center', border: '3px solid #F59E0B' }}>
-          <div style={{ fontSize: '28px', fontWeight: 'bold', color: '#F59E0B' }}>🟡 YELLOW SECTION</div>
+          <div style={{ fontSize: '28px', fontWeight: 'bold', color: '#F59E0B' }}>EAST WING ►</div>
           <div style={{ fontSize: '20px', color: '#374151', marginTop: '12px', fontWeight: 'bold' }}>Right Side</div>
-          <div style={{ fontSize: '18px', color: '#6B7280', marginTop: '8px' }}>2nd Floor Right: 30 students</div>
-          <div style={{ fontSize: '18px', color: '#6B7280', marginTop: '4px' }}>3rd Floor Right: 28 students</div>
+          <div style={{ fontSize: '18px', color: '#6B7280', marginTop: '8px' }}>2nd Floor East: 30 students</div>
+          <div style={{ fontSize: '18px', color: '#6B7280', marginTop: '4px' }}>3rd Floor East: 28 students</div>
           <div style={{ fontSize: '20px', color: '#F59E0B', marginTop: '12px', fontWeight: 'bold' }}>Total: 58 students</div>
         </div>
       </div>
@@ -522,10 +531,10 @@ const FloorPlanApp = () => {
         <h1 style={{ fontSize: '48px', fontWeight: 'bold', color: '#1F2937' }}>Lady Eaton North - Second Floor</h1>
         <div style={{ display: 'flex', gap: '12px' }}>
           <div style={{ backgroundColor: '#DC2626', color: 'white', padding: '12px 24px', borderRadius: '24px', fontSize: '18px', fontWeight: 'bold' }}>
-            🔴 RED (Left)
+            ◄ WEST WING
           </div>
           <div style={{ backgroundColor: '#F59E0B', color: 'white', padding: '12px 24px', borderRadius: '24px', fontSize: '18px', fontWeight: 'bold' }}>
-            🟡 YELLOW (Right)
+            EAST WING ►
           </div>
         </div>
       </div>
@@ -547,7 +556,7 @@ const FloorPlanApp = () => {
           <h2 style={{ fontSize: '28px', fontWeight: 'bold', color: '#1F2937' }}>
             LADY EATON NORTH - SECOND FLOOR
           </h2>
-          <p style={{ fontSize: '20px', color: '#6B7280', fontWeight: 'bold', marginTop: '8px' }}>Vertical Division: Left (Red) & Right (Yellow)</p>
+          <p style={{ fontSize: '20px', color: '#6B7280', fontWeight: 'bold', marginTop: '8px' }}>Vertical Division: West Wing (Left) & East Wing (Right)</p>
         </div>
 
         {/* Visual Floor Plan */}
@@ -564,9 +573,9 @@ const FloorPlanApp = () => {
             gap: '4px',
             marginBottom: '20px'
           }}>
-            {/* Left Half - Red Section (30 rooms) */}
+            {/* Left Half - West Wing (30 rooms) */}
             <div style={{ flex: 1, textAlign: 'center', backgroundColor: '#FEE2E2', padding: '20px', borderRadius: '12px 0 0 12px', border: '3px solid #DC2626', borderRight: '2px solid #DC2626' }}>
-              <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#DC2626', marginBottom: '16px' }}>🔴 RED SECTION (Left)</div>
+              <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#DC2626', marginBottom: '16px' }}>◄ WEST WING (Left)</div>
               <div style={{
                 display: 'flex',
                 flexWrap: 'wrap',
@@ -598,9 +607,9 @@ const FloorPlanApp = () => {
               <div style={{ marginTop: '16px', fontSize: '18px', fontWeight: 'bold', color: '#DC2626' }}>N201-N230 | 30 students</div>
             </div>
 
-            {/* Right Half - Yellow Section (30 rooms) */}
+            {/* Right Half - East Wing (30 rooms) */}
             <div style={{ flex: 1, textAlign: 'center', backgroundColor: '#FEF3C7', padding: '20px', borderRadius: '0 12px 12px 0', border: '3px solid #F59E0B', borderLeft: '2px solid #F59E0B' }}>
-              <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#F59E0B', marginBottom: '16px' }}>🟡 YELLOW SECTION (Right)</div>
+              <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#F59E0B', marginBottom: '16px' }}>EAST WING (Right) ►</div>
               <div style={{
                 display: 'flex',
                 flexWrap: 'wrap',
@@ -629,7 +638,7 @@ const FloorPlanApp = () => {
                   );
                 })}
               </div>
-              <div style={{ marginTop: '16px', fontSize: '18px', fontWeight: 'bold', color: '#F59E0B' }}>N231-N256, N257-N260 | 30 students</div>
+              <div style={{ marginTop: '16px', fontSize: '18px', fontWeight: 'bold', color: '#F59E0B' }}>N231-N260 | 30 students</div>
             </div>
           </div>
         </div>
@@ -643,22 +652,32 @@ const FloorPlanApp = () => {
           <p style={{ fontSize: '24px', fontWeight: 'bold', color: '#1F2937', marginBottom: '20px', textAlign: 'center' }}>
             2nd Floor Double Rooms
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
-            <div style={{ padding: '16px', backgroundColor: '#FEE2E2', borderRadius: '8px', border: '2px solid #DC2626' }}>
-              <p style={{ fontSize: '18px', fontWeight: 'bold', color: '#DC2626' }}>N212 (Double)</p>
-              <p style={{ fontSize: '14px', color: '#6B7280' }}>2 students</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+            <div>
+              <p style={{ fontSize: '20px', fontWeight: 'bold', color: '#DC2626', marginBottom: '12px', textAlign: 'center' }}>◄ WEST WING Doubles</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <div style={{ padding: '16px', backgroundColor: '#FEE2E2', borderRadius: '8px', border: '2px solid #DC2626' }}>
+                  <p style={{ fontSize: '18px', fontWeight: 'bold', color: '#DC2626' }}>N212 (Double)</p>
+                  <p style={{ fontSize: '14px', color: '#6B7280' }}>2 students</p>
+                </div>
+                <div style={{ padding: '16px', backgroundColor: '#FEE2E2', borderRadius: '8px', border: '2px solid #DC2626' }}>
+                  <p style={{ fontSize: '18px', fontWeight: 'bold', color: '#DC2626' }}>N223 (Double)</p>
+                  <p style={{ fontSize: '14px', color: '#6B7280' }}>2 students</p>
+                </div>
+              </div>
             </div>
-            <div style={{ padding: '16px', backgroundColor: '#FEE2E2', borderRadius: '8px', border: '2px solid #DC2626' }}>
-              <p style={{ fontSize: '18px', fontWeight: 'bold', color: '#DC2626' }}>N223 (Double)</p>
-              <p style={{ fontSize: '14px', color: '#6B7280' }}>2 students</p>
-            </div>
-            <div style={{ padding: '16px', backgroundColor: '#FEE2E2', borderRadius: '8px', border: '2px solid #DC2626' }}>
-              <p style={{ fontSize: '18px', fontWeight: 'bold', color: '#DC2626' }}>N234 (Double)</p>
-              <p style={{ fontSize: '14px', color: '#6B7280' }}>2 students</p>
-            </div>
-            <div style={{ padding: '16px', backgroundColor: '#FEE2E2', borderRadius: '8px', border: '2px solid #DC2626' }}>
-              <p style={{ fontSize: '18px', fontWeight: 'bold', color: '#DC2626' }}>N245 (Double)</p>
-              <p style={{ fontSize: '14px', color: '#6B7280' }}>2 students</p>
+            <div>
+              <p style={{ fontSize: '20px', fontWeight: 'bold', color: '#F59E0B', marginBottom: '12px', textAlign: 'center' }}>EAST WING Doubles ►</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <div style={{ padding: '16px', backgroundColor: '#FEF3C7', borderRadius: '8px', border: '2px solid #F59E0B' }}>
+                  <p style={{ fontSize: '18px', fontWeight: 'bold', color: '#F59E0B' }}>N234 (Double)</p>
+                  <p style={{ fontSize: '14px', color: '#6B7280' }}>2 students</p>
+                </div>
+                <div style={{ padding: '16px', backgroundColor: '#FEF3C7', borderRadius: '8px', border: '2px solid #F59E0B' }}>
+                  <p style={{ fontSize: '18px', fontWeight: 'bold', color: '#F59E0B' }}>N245 (Double)</p>
+                  <p style={{ fontSize: '14px', color: '#6B7280' }}>2 students</p>
+                </div>
+              </div>
             </div>
           </div>
           <p style={{ fontSize: '18px', color: '#374151', marginTop: '20px', textAlign: 'center' }}>
@@ -676,8 +695,8 @@ const FloorPlanApp = () => {
       }}>
         <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '16px', color: '#1F2937' }}>Second Floor Summary:</h3>
         <div style={{ fontSize: '18px', lineHeight: '1.8', color: '#374151' }}>
-          <div>• <span style={{ fontWeight: 'bold', color: '#DC2626' }}>Red Section (Left)</span>: 30 rooms | 30 students</div>
-          <div>• <span style={{ fontWeight: 'bold', color: '#F59E0B' }}>Yellow Section (Right)</span>: 30 rooms | 30 students</div>
+          <div>• <span style={{ fontWeight: 'bold', color: '#DC2626' }}>West Wing (Left)</span>: 30 rooms | 30 students</div>
+          <div>• <span style={{ fontWeight: 'bold', color: '#F59E0B' }}>East Wing (Right)</span>: 30 rooms | 30 students</div>
           <div style={{ marginTop: '12px', padding: '16px', backgroundColor: '#F3F4F6', borderRadius: '8px' }}>
             <strong>Total 2nd Floor:</strong> 60 rooms | 60 students (4 doubles + 56 singles)
           </div>
@@ -692,10 +711,10 @@ const FloorPlanApp = () => {
         <h1 style={{ fontSize: '48px', fontWeight: 'bold', color: '#1F2937' }}>Lady Eaton North - Third Floor</h1>
         <div style={{ display: 'flex', gap: '12px' }}>
           <div style={{ backgroundColor: '#DC2626', color: 'white', padding: '12px 24px', borderRadius: '24px', fontSize: '18px', fontWeight: 'bold' }}>
-            🔴 RED (Left)
+            ◄ WEST WING
           </div>
           <div style={{ backgroundColor: '#F59E0B', color: 'white', padding: '12px 24px', borderRadius: '24px', fontSize: '18px', fontWeight: 'bold' }}>
-            🟡 YELLOW (Right)
+            EAST WING ►
           </div>
         </div>
       </div>
@@ -717,7 +736,7 @@ const FloorPlanApp = () => {
           <h2 style={{ fontSize: '28px', fontWeight: 'bold', color: '#1F2937' }}>
             LADY EATON NORTH - THIRD FLOOR
           </h2>
-          <p style={{ fontSize: '20px', color: '#6B7280', fontWeight: 'bold', marginTop: '8px' }}>Vertical Division: Left (Red) & Right (Yellow)</p>
+          <p style={{ fontSize: '20px', color: '#6B7280', fontWeight: 'bold', marginTop: '8px' }}>Vertical Division: West Wing (Left) & East Wing (Right)</p>
         </div>
 
         {/* Visual Floor Plan */}
@@ -734,9 +753,9 @@ const FloorPlanApp = () => {
             gap: '4px',
             marginBottom: '20px'
           }}>
-            {/* Left Half - Red Section (28 rooms) */}
+            {/* Left Half - West Wing (28 rooms) */}
             <div style={{ flex: 1, textAlign: 'center', backgroundColor: '#FEE2E2', padding: '20px', borderRadius: '12px 0 0 12px', border: '3px solid #DC2626', borderRight: '2px solid #DC2626' }}>
-              <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#DC2626', marginBottom: '16px' }}>🔴 RED SECTION (Left)</div>
+              <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#DC2626', marginBottom: '16px' }}>◄ WEST WING (Left)</div>
               <div style={{
                 display: 'flex',
                 flexWrap: 'wrap',
@@ -768,9 +787,9 @@ const FloorPlanApp = () => {
               <div style={{ marginTop: '16px', fontSize: '18px', fontWeight: 'bold', color: '#DC2626' }}>N301-N328 | 28 students</div>
             </div>
 
-            {/* Right Half - Yellow Section (28 rooms) */}
+            {/* Right Half - East Wing (28 rooms) */}
             <div style={{ flex: 1, textAlign: 'center', backgroundColor: '#FEF3C7', padding: '20px', borderRadius: '0 12px 12px 0', border: '3px solid #F59E0B', borderLeft: '2px solid #F59E0B' }}>
-              <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#F59E0B', marginBottom: '16px' }}>🟡 YELLOW SECTION (Right)</div>
+              <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#F59E0B', marginBottom: '16px' }}>EAST WING (Right) ►</div>
               <div style={{
                 display: 'flex',
                 flexWrap: 'wrap',
@@ -799,7 +818,7 @@ const FloorPlanApp = () => {
                   );
                 })}
               </div>
-              <div style={{ marginTop: '16px', fontSize: '18px', fontWeight: 'bold', color: '#F59E0B' }}>N329-N354, N355-N356 | 28 students</div>
+              <div style={{ marginTop: '16px', fontSize: '18px', fontWeight: 'bold', color: '#F59E0B' }}>N329-N356 | 28 students</div>
             </div>
           </div>
         </div>
@@ -813,17 +832,27 @@ const FloorPlanApp = () => {
           <p style={{ fontSize: '24px', fontWeight: 'bold', color: '#1F2937', marginBottom: '20px', textAlign: 'center' }}>
             3rd Floor Double Rooms
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px', marginBottom: '20px' }}>
-            <div style={{ padding: '16px', backgroundColor: '#FEF3C7', borderRadius: '8px', border: '2px solid #F59E0B' }}>
-              <p style={{ fontSize: '18px', fontWeight: 'bold', color: '#F59E0B' }}>N322 (Double)</p>
-              <p style={{ fontSize: '14px', color: '#6B7280' }}>2 students</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+            <div>
+              <p style={{ fontSize: '20px', fontWeight: 'bold', color: '#DC2626', marginBottom: '12px', textAlign: 'center' }}>◄ WEST WING Double</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <div style={{ padding: '16px', backgroundColor: '#FEE2E2', borderRadius: '8px', border: '2px solid #DC2626' }}>
+                  <p style={{ fontSize: '18px', fontWeight: 'bold', color: '#DC2626' }}>N322 (Double)</p>
+                  <p style={{ fontSize: '14px', color: '#6B7280' }}>2 students</p>
+                </div>
+              </div>
             </div>
-            <div style={{ padding: '16px', backgroundColor: '#FEF3C7', borderRadius: '8px', border: '2px solid #F59E0B' }}>
-              <p style={{ fontSize: '18px', fontWeight: 'bold', color: '#F59E0B' }}>N333 (Double)</p>
-              <p style={{ fontSize: '14px', color: '#6B7280' }}>2 students</p>
+            <div>
+              <p style={{ fontSize: '20px', fontWeight: 'bold', color: '#F59E0B', marginBottom: '12px', textAlign: 'center' }}>EAST WING Double ►</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                <div style={{ padding: '16px', backgroundColor: '#FEF3C7', borderRadius: '8px', border: '2px solid #F59E0B' }}>
+                  <p style={{ fontSize: '18px', fontWeight: 'bold', color: '#F59E0B' }}>N333 (Double)</p>
+                  <p style={{ fontSize: '14px', color: '#6B7280' }}>2 students</p>
+                </div>
+              </div>
             </div>
           </div>
-          <p style={{ fontSize: '18px', color: '#374151', textAlign: 'center' }}>
+          <p style={{ fontSize: '18px', color: '#374151', marginTop: '20px', textAlign: 'center' }}>
             + 54 single rooms (1 student each)
           </p>
         </div>
@@ -838,8 +867,8 @@ const FloorPlanApp = () => {
       }}>
         <h3 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '16px', color: '#1F2937' }}>Third Floor Summary:</h3>
         <div style={{ fontSize: '18px', lineHeight: '1.8', color: '#374151' }}>
-          <div>• <span style={{ fontWeight: 'bold', color: '#DC2626' }}>Red Section (Left)</span>: 28 rooms | 28 students</div>
-          <div>• <span style={{ fontWeight: 'bold', color: '#F59E0B' }}>Yellow Section (Right)</span>: 28 rooms | 28 students</div>
+          <div>• <span style={{ fontWeight: 'bold', color: '#DC2626' }}>West Wing (Left)</span>: 28 rooms | 28 students</div>
+          <div>• <span style={{ fontWeight: 'bold', color: '#F59E0B' }}>East Wing (Right)</span>: 28 rooms | 28 students</div>
           <div style={{ marginTop: '12px', padding: '16px', backgroundColor: '#F3F4F6', borderRadius: '8px' }}>
             <strong>Total 3rd Floor:</strong> 56 rooms | 56 students (2 doubles + 54 singles)
           </div>
