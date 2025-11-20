@@ -1,4 +1,4 @@
-kimport React, { useState } from 'react';
+import React, { useState } from 'react';
 
 const FloorPlanApp = () => {
   const [currentFloor, setCurrentFloor] = useState('intro');
