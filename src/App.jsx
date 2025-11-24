@@ -719,16 +719,16 @@ const FloorPlanApp = () => {
         </div>
       </div>
 
-      <div style={{ 
-        backgroundColor: '#A7C7A8', 
-        padding: '40px', 
+      <div style={{
+        backgroundColor: '#A7C7A8',
+        padding: '40px',
         borderRadius: '24px',
         boxShadow: '0 10px 20px rgba(0,0,0,0.1)'
       }}>
-        <div style={{ 
-          backgroundColor: 'white', 
-          padding: '20px', 
-          borderRadius: '16px', 
+        <div style={{
+          backgroundColor: 'white',
+          padding: '20px',
+          borderRadius: '16px',
           marginBottom: '30px',
           textAlign: 'center',
           border: '3px solid #6B7280'
@@ -823,9 +823,9 @@ const FloorPlanApp = () => {
           </div>
         </div>
 
-        <div style={{ 
-          backgroundColor: 'white', 
-          padding: '30px', 
+        <div style={{
+          backgroundColor: 'white',
+          padding: '30px',
           borderRadius: '12px',
           marginBottom: '20px'
         }}>
@@ -858,10 +858,10 @@ const FloorPlanApp = () => {
         </div>
       </div>
 
-      <div style={{ 
-        marginTop: '30px', 
-        backgroundColor: 'white', 
-        padding: '24px', 
+      <div style={{
+        marginTop: '30px',
+        backgroundColor: 'white',
+        padding: '24px',
         borderRadius: '12px',
         boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
       }}>
@@ -871,6 +871,73 @@ const FloorPlanApp = () => {
           <div>• <span style={{ fontWeight: 'bold', color: '#F59E0B' }}>East Wing (Right)</span>: 28 rooms | 28 students</div>
           <div style={{ marginTop: '12px', padding: '16px', backgroundColor: '#F3F4F6', borderRadius: '8px' }}>
             <strong>Total 3rd Floor:</strong> 56 rooms | 56 students (2 doubles + 54 singles)
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const NorthRecommendation = () => (
+    <div style={{ padding: '40px', maxWidth: '1200px', margin: '0 auto' }}>
+      <h1 style={{ fontSize: '48px', fontWeight: 'bold', textAlign: 'center', marginBottom: '40px', color: '#3B82F6' }}>
+        ✓ Recommendations
+      </h1>
+
+      <div style={{ backgroundColor: '#DBEAFE', padding: '30px', borderRadius: '16px', marginBottom: '20px', borderLeft: '6px solid #3B82F6' }}>
+        <h3 style={{ fontSize: '24px', fontWeight: 'bold', color: '#1E40AF', marginBottom: '12px' }}>🚨 Emergency Exit & Muster Point Alignment</h3>
+        <p style={{ fontSize: '18px', lineHeight: '1.6', color: '#374151' }}>
+          The vertical West/East division system is particularly effective because <strong>each don exits from their designated side of the building</strong> based on their floor location (left or right). This aligns perfectly with muster point assignments, ensuring that <strong>students have a don leader going to the correct muster point</strong>. In emergency evacuations, this geographic clarity reduces confusion and ensures all students can quickly identify and follow their designated don to safety.
+        </p>
+      </div>
+
+      <div style={{ backgroundColor: '#D1FAE5', padding: '30px', borderRadius: '16px', marginBottom: '20px', borderLeft: '6px solid #10B981' }}>
+        <h3 style={{ fontSize: '24px', fontWeight: 'bold', color: '#065F46', marginBottom: '12px' }}>⚖️ Equal Workload Distribution</h3>
+        <p style={{ fontSize: '18px', lineHeight: '1.6', color: '#374151' }}>
+          With the vertical division, the workload is now <strong>perfectly equal between the two dons</strong> - each managing exactly 58 students across two floors. This ensures fair distribution of responsibilities, including duty rounds, programming requirements, one-on-ones, and administrative tasks. Neither don is overburdened, creating a sustainable and balanced work environment.
+        </p>
+      </div>
+
+      <div style={{ backgroundColor: '#FEF3C7', padding: '30px', borderRadius: '16px', marginBottom: '20px', borderLeft: '6px solid #F59E0B' }}>
+        <h3 style={{ fontSize: '24px', fontWeight: 'bold', color: '#92400E', marginBottom: '12px' }}>👥 Floor Community Interaction</h3>
+        <p style={{ fontSize: '18px', lineHeight: '1.6', color: '#374151' }}>
+          Dons still have the opportunity to <strong>interact with all students on their floors</strong> through shared common rooms and laundry facilities. The vertical division doesn't isolate dons from half the floor - rather, it <strong>clarifies their direct responsibilities while maintaining floor-wide community</strong>. This makes administrative deadlines more manageable and evenly distributed, as each don has clear accountability for their 58 students rather than competing priorities.
+        </p>
+      </div>
+
+      <div style={{ backgroundColor: '#FEE2E2', padding: '30px', borderRadius: '16px', borderLeft: '6px solid #DC2626' }}>
+        <h3 style={{ fontSize: '24px', fontWeight: 'bold', color: '#991B1B', marginBottom: '12px' }}>📅 Assignment Deadline Extensions</h3>
+        <p style={{ fontSize: '18px', lineHeight: '1.6', color: '#374151', marginBottom: '16px' }}>
+          Given the number of students assigned to Lady Eaton North dons (58 students each), <strong>assignment due dates should be extended to match those given to dons in the Lady Eaton Annex and Champlain buildings</strong>. Managing 58 students creates a comparable workload to the annex buildings, and dons should receive equivalent time to complete:
+        </p>
+        <ul style={{ fontSize: '18px', lineHeight: '1.8', color: '#374151', marginLeft: '24px' }}>
+          <li>One-on-one check-ins and documentation</li>
+          <li>Community programming and event planning</li>
+          <li>Administrative reports and assessments</li>
+          <li>Incident documentation and follow-ups</li>
+        </ul>
+        <p style={{ fontSize: '18px', lineHeight: '1.6', color: '#374151', marginTop: '16px' }}>
+          <strong>Equal student loads should mean equal deadlines</strong> - this ensures fairness across all Lady Eaton College dons regardless of which building they serve.
+        </p>
+      </div>
+
+      <div style={{ backgroundColor: '#EFF6FF', padding: '30px', borderRadius: '16px', border: '2px solid #3B82F6', marginTop: '30px' }}>
+        <h3 style={{ fontSize: '24px', fontWeight: 'bold', color: '#1E40AF', marginBottom: '16px', textAlign: 'center' }}>Summary of Benefits</h3>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
+          <div style={{ padding: '16px', backgroundColor: 'white', borderRadius: '8px' }}>
+            <p style={{ fontSize: '16px', fontWeight: 'bold', color: '#3B82F6', marginBottom: '8px' }}>✓ Emergency Safety</p>
+            <p style={{ fontSize: '14px', color: '#6B7280' }}>Clear exit routes and muster point leadership</p>
+          </div>
+          <div style={{ padding: '16px', backgroundColor: 'white', borderRadius: '8px' }}>
+            <p style={{ fontSize: '16px', fontWeight: 'bold', color: '#3B82F6', marginBottom: '8px' }}>✓ Equal Workload</p>
+            <p style={{ fontSize: '14px', color: '#6B7280' }}>58 students per don - perfectly balanced</p>
+          </div>
+          <div style={{ padding: '16px', backgroundColor: 'white', borderRadius: '8px' }}>
+            <p style={{ fontSize: '16px', fontWeight: 'bold', color: '#3B82F6', marginBottom: '8px' }}>✓ Community Access</p>
+            <p style={{ fontSize: '14px', color: '#6B7280' }}>Shared facilities maintain floor-wide connections</p>
+          </div>
+          <div style={{ padding: '16px', backgroundColor: 'white', borderRadius: '8px' }}>
+            <p style={{ fontSize: '16px', fontWeight: 'bold', color: '#3B82F6', marginBottom: '8px' }}>✓ Fair Deadlines</p>
+            <p style={{ fontSize: '14px', color: '#6B7280' }}>Extended timelines matching annex buildings</p>
           </div>
         </div>
       </div>
@@ -1044,15 +1111,15 @@ const FloorPlanApp = () => {
 
         {/* North Navigation */}
         {currentBuilding === 'north' && (
-          <div style={{ 
-            maxWidth: '1400px', 
-            margin: '0 auto', 
-            display: 'flex', 
+          <div style={{
+            maxWidth: '1400px',
+            margin: '0 auto',
+            display: 'flex',
             gap: '12px',
             justifyContent: 'center',
             flexWrap: 'wrap'
           }}>
-            <button 
+            <button
               onClick={() => setCurrentFloor('north-intro')}
               style={{
                 padding: '12px 24px',
@@ -1069,7 +1136,7 @@ const FloorPlanApp = () => {
             >
               Introduction
             </button>
-            <button 
+            <button
               onClick={() => setCurrentFloor('north-second')}
               style={{
                 padding: '12px 24px',
@@ -1086,7 +1153,7 @@ const FloorPlanApp = () => {
             >
               2nd Floor Split
             </button>
-            <button 
+            <button
               onClick={() => setCurrentFloor('north-third')}
               style={{
                 padding: '12px 24px',
@@ -1102,6 +1169,23 @@ const FloorPlanApp = () => {
               }}
             >
               3rd Floor Split
+            </button>
+            <button
+              onClick={() => setCurrentFloor('north-recommendation')}
+              style={{
+                padding: '12px 24px',
+                fontSize: '16px',
+                fontWeight: 'bold',
+                border: 'none',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                backgroundColor: currentFloor === 'north-recommendation' ? '#3B82F6' : 'white',
+                color: currentFloor === 'north-recommendation' ? 'white' : '#3B82F6',
+                border: '2px solid #3B82F6',
+                transition: 'all 0.3s'
+              }}
+            >
+              Recommendations
             </button>
           </div>
         )}
@@ -1123,6 +1207,7 @@ const FloorPlanApp = () => {
             {currentFloor === 'north-intro' && <NorthIntro />}
             {currentFloor === 'north-second' && <NorthSecondFloor />}
             {currentFloor === 'north-third' && <NorthThirdFloor />}
+            {currentFloor === 'north-recommendation' && <NorthRecommendation />}
           </>
         )}
       </div>
