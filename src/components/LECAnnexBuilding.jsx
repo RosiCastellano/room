@@ -1,7 +1,7 @@
 import React from 'react';
 import { UnitBox, DonRoomBox, colors } from './SharedComponents';
 
-const AnnexBuilding = ({ currentFloor, setCurrentFloor }) => {
+const LECAnnexBuilding = ({ currentFloor, setCurrentFloor }) => {
   const IntroPage = () => (
     <div style={{ padding: '40px', maxWidth: '1200px', margin: '0 auto' }}>
       <h1 style={{ fontSize: '48px', fontWeight: 'bold', textAlign: 'center', marginBottom: '20px', color: '#1F2937' }}>
@@ -381,4 +381,4 @@ const AnnexBuilding = ({ currentFloor, setCurrentFloor }) => {
   );
 };
 
-export default AnnexBuilding;
+export default LECAnnexBuilding;
