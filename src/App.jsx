@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import ChamplainBuilding from './components/ChamplainBuilding';
 
 const FloorPlanApp = () => {
   const [currentFloor, setCurrentFloor] = useState('intro');
-  const [currentBuilding, setCurrentBuilding] = useState('annex'); // 'annex' or 'north'
+  const [currentBuilding, setCurrentBuilding] = useState('annex'); // 'annex', 'north', or 'champlain'
 
   const colors = {
     gold: '#FEF3C7',
@@ -989,7 +990,7 @@ const FloorPlanApp = () => {
           >
             🏛️ Lady Eaton Annex
           </button>
-          <button 
+          <button
             onClick={() => {
               setCurrentBuilding('north');
               setCurrentFloor('north-intro');
@@ -1008,6 +1009,26 @@ const FloorPlanApp = () => {
             }}
           >
             🏢 Lady Eaton North
+          </button>
+          <button
+            onClick={() => {
+              setCurrentBuilding('champlain');
+              setCurrentFloor('champlain-intro');
+            }}
+            style={{
+              padding: '14px 32px',
+              fontSize: '18px',
+              fontWeight: 'bold',
+              border: 'none',
+              borderRadius: '10px',
+              cursor: 'pointer',
+              backgroundColor: currentBuilding === 'champlain' ? '#7C3AED' : 'white',
+              color: currentBuilding === 'champlain' ? 'white' : '#1F2937',
+              border: `3px solid ${currentBuilding === 'champlain' ? '#7C3AED' : '#D1D5DB'}`,
+              transition: 'all 0.3s'
+            }}
+          >
+            💎 Champlain Annex
           </button>
         </div>
 
@@ -1189,6 +1210,104 @@ const FloorPlanApp = () => {
             </button>
           </div>
         )}
+
+        {/* Champlain Navigation */}
+        {currentBuilding === 'champlain' && (
+          <div style={{
+            maxWidth: '1400px',
+            margin: '0 auto',
+            display: 'flex',
+            gap: '12px',
+            justifyContent: 'center',
+            flexWrap: 'wrap'
+          }}>
+            <button
+              onClick={() => setCurrentFloor('champlain-intro')}
+              style={{
+                padding: '12px 24px',
+                fontSize: '16px',
+                fontWeight: 'bold',
+                border: 'none',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                backgroundColor: currentFloor === 'champlain-intro' ? '#7C3AED' : 'white',
+                color: currentFloor === 'champlain-intro' ? 'white' : '#7C3AED',
+                border: '2px solid #7C3AED',
+                transition: 'all 0.3s'
+              }}
+            >
+              Introduction
+            </button>
+            <button
+              onClick={() => setCurrentFloor('champlain-first')}
+              style={{
+                padding: '12px 24px',
+                fontSize: '16px',
+                fontWeight: 'bold',
+                border: 'none',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                backgroundColor: currentFloor === 'champlain-first' ? '#6B7280' : 'white',
+                color: currentFloor === 'champlain-first' ? 'white' : '#6B7280',
+                border: '2px solid #6B7280',
+                transition: 'all 0.3s'
+              }}
+            >
+              First Floor
+            </button>
+            <button
+              onClick={() => setCurrentFloor('champlain-second')}
+              style={{
+                padding: '12px 24px',
+                fontSize: '16px',
+                fontWeight: 'bold',
+                border: 'none',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                backgroundColor: currentFloor === 'champlain-second' ? '#6B7280' : 'white',
+                color: currentFloor === 'champlain-second' ? 'white' : '#6B7280',
+                border: '2px solid #6B7280',
+                transition: 'all 0.3s'
+              }}
+            >
+              Second Floor
+            </button>
+            <button
+              onClick={() => setCurrentFloor('champlain-third')}
+              style={{
+                padding: '12px 24px',
+                fontSize: '16px',
+                fontWeight: 'bold',
+                border: 'none',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                backgroundColor: currentFloor === 'champlain-third' ? '#6B7280' : 'white',
+                color: currentFloor === 'champlain-third' ? 'white' : '#6B7280',
+                border: '2px solid #6B7280',
+                transition: 'all 0.3s'
+              }}
+            >
+              Third Floor
+            </button>
+            <button
+              onClick={() => setCurrentFloor('champlain-recommendation')}
+              style={{
+                padding: '12px 24px',
+                fontSize: '16px',
+                fontWeight: 'bold',
+                border: 'none',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                backgroundColor: currentFloor === 'champlain-recommendation' ? '#7C3AED' : 'white',
+                color: currentFloor === 'champlain-recommendation' ? 'white' : '#7C3AED',
+                border: '2px solid #7C3AED',
+                transition: 'all 0.3s'
+              }}
+            >
+              Recommendation
+            </button>
+          </div>
+        )}
       </nav>
 
       {/* Content */}
@@ -1209,6 +1328,9 @@ const FloorPlanApp = () => {
             {currentFloor === 'north-third' && <NorthThirdFloor />}
             {currentFloor === 'north-recommendation' && <NorthRecommendation />}
           </>
+        )}
+        {currentBuilding === 'champlain' && (
+          <ChamplainBuilding currentFloor={currentFloor} setCurrentFloor={setCurrentFloor} />
         )}
       </div>
     </div>
