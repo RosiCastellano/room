@@ -16,6 +16,19 @@ const FloorPlanApp = () => {
     donRoom: '#D1D5DB'
   };
 
+  const navButtonStyle = (isActive, color) => ({
+    padding: 'clamp(8px, 2vw, 12px) clamp(12px, 3vw, 24px)',
+    fontSize: 'clamp(12px, 2vw, 16px)',
+    fontWeight: 'bold',
+    borderRadius: '8px',
+    cursor: 'pointer',
+    backgroundColor: isActive ? color : 'white',
+    color: isActive ? 'white' : color,
+    border: `2px solid ${color}`,
+    transition: 'all 0.3s',
+    whiteSpace: 'nowrap'
+  });
+
   const UnitBox = ({ number, color, textColor }) => (
     <div style={{
       width: '140px',
@@ -1314,62 +1327,10 @@ const FloorPlanApp = () => {
 
         {/* South Navigation */}
         {currentBuilding === 'south' && (
-          <div style={{
-            maxWidth: '1400px',
-            margin: '0 auto',
-            display: 'flex',
-            gap: '12px',
-            justifyContent: 'center',
-            flexWrap: 'wrap'
-          }}>
-            <button
-              onClick={() => setCurrentFloor('south-intro')}
-              style={{
-                padding: '12px 24px',
-                fontSize: '16px',
-                fontWeight: 'bold',
-                borderRadius: '8px',
-                cursor: 'pointer',
-                backgroundColor: currentFloor === 'south-intro' ? '#F97316' : 'white',
-                color: currentFloor === 'south-intro' ? 'white' : '#F97316',
-                border: '2px solid #F97316',
-                transition: 'all 0.3s'
-              }}
-            >
-              Introduction
-            </button>
-            <button
-              onClick={() => setCurrentFloor('south-first')}
-              style={{
-                padding: '12px 24px',
-                fontSize: '16px',
-                fontWeight: 'bold',
-                borderRadius: '8px',
-                cursor: 'pointer',
-                backgroundColor: currentFloor === 'south-first' ? '#6B7280' : 'white',
-                color: currentFloor === 'south-first' ? 'white' : '#6B7280',
-                border: '2px solid #6B7280',
-                transition: 'all 0.3s'
-              }}
-            >
-              1st Floor
-            </button>
-            <button
-              onClick={() => setCurrentFloor('south-second')}
-              style={{
-                padding: '12px 24px',
-                fontSize: '16px',
-                fontWeight: 'bold',
-                borderRadius: '8px',
-                cursor: 'pointer',
-                backgroundColor: currentFloor === 'south-second' ? '#6B7280' : 'white',
-                color: currentFloor === 'south-second' ? 'white' : '#6B7280',
-                border: '2px solid #6B7280',
-                transition: 'all 0.3s'
-              }}
-            >
-              2nd Floor
-            </button>
+          <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'flex', gap: 'clamp(6px, 1.5vw, 12px)', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <button onClick={() => setCurrentFloor('south-intro')} style={navButtonStyle(currentFloor === 'south-intro', '#F97316')}>Intro</button>
+            <button onClick={() => setCurrentFloor('south-first')} style={navButtonStyle(currentFloor === 'south-first', '#6B7280')}>1st Floor</button>
+            <button onClick={() => setCurrentFloor('south-second')} style={navButtonStyle(currentFloor === 'south-second', '#6B7280')}>2nd Floor</button>
           </div>
         )}
       </nav>
