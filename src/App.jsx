@@ -1331,6 +1331,7 @@ const FloorPlanApp = () => {
             <button onClick={() => setCurrentFloor('south-intro')} style={navButtonStyle(currentFloor === 'south-intro', '#F97316')}>Intro</button>
             <button onClick={() => setCurrentFloor('south-first')} style={navButtonStyle(currentFloor === 'south-first', '#6B7280')}>1st Floor</button>
             <button onClick={() => setCurrentFloor('south-second')} style={navButtonStyle(currentFloor === 'south-second', '#6B7280')}>2nd Floor</button>
+            <button onClick={() => setCurrentFloor('south-third')} style={navButtonStyle(currentFloor === 'south-third', '#6B7280')}>3rd Floor</button>
           </div>
         )}
       </nav>
