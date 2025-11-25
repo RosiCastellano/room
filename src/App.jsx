@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ChamplainBuilding from './components/ChamplainBuilding';
+import SouthBuilding from './components/SouthBuilding';
 
 const FloorPlanApp = () => {
   const [currentFloor, setCurrentFloor] = useState('intro');
@@ -1027,6 +1028,25 @@ const FloorPlanApp = () => {
           >
             💎 Champlain Annex
           </button>
+          <button
+            onClick={() => {
+              setCurrentBuilding('south');
+              setCurrentFloor('south-intro');
+            }}
+            style={{
+              padding: '14px 32px',
+              fontSize: '18px',
+              fontWeight: 'bold',
+              borderRadius: '10px',
+              cursor: 'pointer',
+              backgroundColor: currentBuilding === 'south' ? '#F97316' : 'white',
+              color: currentBuilding === 'south' ? 'white' : '#1F2937',
+              border: `3px solid ${currentBuilding === 'south' ? '#F97316' : '#D1D5DB'}`,
+              transition: 'all 0.3s'
+            }}
+          >
+            🏠 Lady Eaton South
+          </button>
         </div>
 
         {/* Annex Navigation */}
@@ -1291,6 +1311,67 @@ const FloorPlanApp = () => {
             </button>
           </div>
         )}
+
+        {/* South Navigation */}
+        {currentBuilding === 'south' && (
+          <div style={{
+            maxWidth: '1400px',
+            margin: '0 auto',
+            display: 'flex',
+            gap: '12px',
+            justifyContent: 'center',
+            flexWrap: 'wrap'
+          }}>
+            <button
+              onClick={() => setCurrentFloor('south-intro')}
+              style={{
+                padding: '12px 24px',
+                fontSize: '16px',
+                fontWeight: 'bold',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                backgroundColor: currentFloor === 'south-intro' ? '#F97316' : 'white',
+                color: currentFloor === 'south-intro' ? 'white' : '#F97316',
+                border: '2px solid #F97316',
+                transition: 'all 0.3s'
+              }}
+            >
+              Introduction
+            </button>
+            <button
+              onClick={() => setCurrentFloor('south-first')}
+              style={{
+                padding: '12px 24px',
+                fontSize: '16px',
+                fontWeight: 'bold',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                backgroundColor: currentFloor === 'south-first' ? '#6B7280' : 'white',
+                color: currentFloor === 'south-first' ? 'white' : '#6B7280',
+                border: '2px solid #6B7280',
+                transition: 'all 0.3s'
+              }}
+            >
+              1st Floor
+            </button>
+            <button
+              onClick={() => setCurrentFloor('south-second')}
+              style={{
+                padding: '12px 24px',
+                fontSize: '16px',
+                fontWeight: 'bold',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                backgroundColor: currentFloor === 'south-second' ? '#6B7280' : 'white',
+                color: currentFloor === 'south-second' ? 'white' : '#6B7280',
+                border: '2px solid #6B7280',
+                transition: 'all 0.3s'
+              }}
+            >
+              2nd Floor
+            </button>
+          </div>
+        )}
       </nav>
 
       {/* Content */}
@@ -1314,6 +1395,9 @@ const FloorPlanApp = () => {
         )}
         {currentBuilding === 'champlain' && (
           <ChamplainBuilding currentFloor={currentFloor} setCurrentFloor={setCurrentFloor} />
+        )}
+        {currentBuilding === 'south' && (
+          <SouthBuilding currentFloor={currentFloor} setCurrentFloor={setCurrentFloor} />
         )}
       </div>
     </div>
