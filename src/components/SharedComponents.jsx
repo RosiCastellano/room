@@ -12,8 +12,11 @@ export const colors = {
 
 export const UnitBox = ({ number, color }) => (
   <div style={{
-    width: '140px',
-    height: '140px',
+    width: '100%',
+    maxWidth: '140px',
+    minWidth: '80px',
+    height: 'auto',
+    aspectRatio: '1',
     backgroundColor: 'white',
     border: '4px solid #1F2937',
     borderRadius: '16px',
@@ -21,29 +24,34 @@ export const UnitBox = ({ number, color }) => (
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+    padding: '10px'
   }}>
     <div style={{
-      fontSize: '48px',
+      fontSize: 'clamp(24px, 5vw, 48px)',
       fontWeight: 'bold',
       color: '#1F2937'
     }}>
       {number}
     </div>
     <div style={{
-      width: '40px',
-      height: '40px',
+      width: 'clamp(20px, 4vw, 40px)',
+      height: 'clamp(20px, 4vw, 40px)',
       backgroundColor: color,
       borderRadius: '8px',
-      marginTop: '8px'
+      marginTop: '8px',
+      flexShrink: 0
     }} />
   </div>
 );
 
 export const DonRoomBox = ({ number }) => (
   <div style={{
-    width: '140px',
-    height: '140px',
+    width: '100%',
+    maxWidth: '140px',
+    minWidth: '80px',
+    height: 'auto',
+    aspectRatio: '1',
     backgroundColor: colors.donRoom,
     border: '4px solid #1F2937',
     borderRadius: '16px',
@@ -51,17 +59,18 @@ export const DonRoomBox = ({ number }) => (
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+    padding: '10px'
   }}>
     <div style={{
-      fontSize: '36px',
+      fontSize: 'clamp(20px, 4vw, 36px)',
       fontWeight: 'bold',
       color: '#6B7280'
     }}>
       {number}
     </div>
     <div style={{
-      fontSize: '18px',
+      fontSize: 'clamp(12px, 2.5vw, 18px)',
       fontWeight: 'bold',
       color: '#6B7280',
       marginTop: '4px'
