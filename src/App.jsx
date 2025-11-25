@@ -2,11 +2,17 @@ import React, { useState } from 'react';
 import AnnexBuilding from './components/AnnexBuilding';
 import NorthBuilding from './components/NorthBuilding';
 import SouthBuilding from './components/SouthBuilding';
+import ChamplainAnnexBuilding from './components/ChamplainAnnexBuilding';
 
 const App = () => {
   const [showBuildings, setShowBuildings] = useState(true);
   const [currentBuilding, setCurrentBuilding] = useState('annex');
   const [currentFloor, setCurrentFloor] = useState('intro');
+
+  // Champlain state
+  const [showChamplainBuildings, setShowChamplainBuildings] = useState(false);
+  const [currentChamplainBuilding, setCurrentChamplainBuilding] = useState('champlain-annex');
+  const [currentChamplainFloor, setCurrentChamplainFloor] = useState('champlain-intro');
 
   const navButtonStyle = (isActive, activeColor) => ({
     padding: 'clamp(8px, 2vw, 12px) clamp(16px, 3vw, 24px)',
@@ -28,6 +34,11 @@ const App = () => {
     setCurrentFloor(defaultFloor);
   };
 
+  const handleChamplainBuildingChange = (building, defaultFloor) => {
+    setCurrentChamplainBuilding(building);
+    setCurrentChamplainFloor(defaultFloor);
+  };
+
   return (
     <div style={{
       minHeight: '100vh',
@@ -43,11 +54,15 @@ const App = () => {
         top: 0,
         zIndex: 1000
       }}>
-        {/* Main Lady Eaton Toggle */}
+        {/* Main Residence Toggles */}
         <div style={{
           maxWidth: '1400px',
           margin: '0 auto',
-          marginBottom: showBuildings ? '20px' : '0'
+          marginBottom: (showBuildings || showChamplainBuildings) ? '20px' : '0',
+          display: 'flex',
+          gap: 'clamp(12px, 2vw, 20px)',
+          justifyContent: 'center',
+          flexWrap: 'wrap'
         }}>
           <button
             onClick={() => setShowBuildings(!showBuildings)}
@@ -65,11 +80,31 @@ const App = () => {
               display: 'flex',
               alignItems: 'center',
               gap: '12px',
-              margin: '0 auto',
               border: '3px solid #059669'
             }}
           >
             🏛️ LADY EATON {showBuildings ? '▼' : '▶'}
+          </button>
+          <button
+            onClick={() => setShowChamplainBuildings(!showChamplainBuildings)}
+            style={{
+              padding: 'clamp(12px, 2.5vw, 16px) clamp(24px, 4vw, 40px)',
+              fontSize: 'clamp(16px, 2.5vw, 20px)',
+              fontWeight: 'bold',
+              border: 'none',
+              borderRadius: '12px',
+              cursor: 'pointer',
+              backgroundColor: '#8B5CF6',
+              color: 'white',
+              boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+              transition: 'all 0.3s',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '12px',
+              border: '3px solid #7C3AED'
+            }}
+          >
+            🏛️ CHAMPLAIN {showChamplainBuildings ? '▼' : '▶'}
           </button>
         </div>
 
@@ -183,18 +218,76 @@ const App = () => {
             </div>
           </>
         )}
+
+        {/* Champlain Building Selector - Only shows when expanded */}
+        {showChamplainBuildings && (
+          <>
+            <div style={{
+              maxWidth: '1400px',
+              margin: '0 auto 20px auto',
+              display: 'flex',
+              gap: 'clamp(8px, 2vw, 16px)',
+              justifyContent: 'center',
+              borderBottom: '2px solid #E5E7EB',
+              paddingBottom: '16px',
+              flexWrap: 'wrap'
+            }}>
+              <button
+                onClick={() => handleChamplainBuildingChange('champlain-annex', 'champlain-intro')}
+                style={{
+                  padding: 'clamp(10px, 2vw, 14px) clamp(20px, 3vw, 32px)',
+                  fontSize: 'clamp(14px, 2.5vw, 18px)',
+                  fontWeight: 'bold',
+                  border: 'none',
+                  borderRadius: '10px',
+                  cursor: 'pointer',
+                  backgroundColor: currentChamplainBuilding === 'champlain-annex' ? '#8B5CF6' : 'white',
+                  color: currentChamplainBuilding === 'champlain-annex' ? 'white' : '#1F2937',
+                  border: `3px solid ${currentChamplainBuilding === 'champlain-annex' ? '#8B5CF6' : '#D1D5DB'}`,
+                  transition: 'all 0.3s',
+                  whiteSpace: 'nowrap'
+                }}
+              >
+                Annex
+              </button>
+            </div>
+
+            {/* Champlain Floor Navigation */}
+            <div style={{
+              maxWidth: '1400px',
+              margin: '0 auto',
+              display: 'flex',
+              gap: 'clamp(6px, 1.5vw, 12px)',
+              justifyContent: 'center',
+              flexWrap: 'wrap'
+            }}>
+              {/* Champlain Annex Navigation */}
+              {currentChamplainBuilding === 'champlain-annex' && (
+                <>
+                  <button onClick={() => setCurrentChamplainFloor('champlain-intro')} style={navButtonStyle(currentChamplainFloor === 'champlain-intro', '#8B5CF6')}>Intro</button>
+                </>
+              )}
+            </div>
+          </>
+        )}
       </nav>
 
       {/* Content */}
       <div style={{ paddingTop: '20px', paddingBottom: '40px' }}>
-        {currentBuilding === 'annex' && (
+        {/* Lady Eaton Buildings */}
+        {showBuildings && currentBuilding === 'annex' && (
           <AnnexBuilding currentFloor={currentFloor} setCurrentFloor={setCurrentFloor} />
         )}
-        {currentBuilding === 'north' && (
+        {showBuildings && currentBuilding === 'north' && (
           <NorthBuilding currentFloor={currentFloor} setCurrentFloor={setCurrentFloor} />
         )}
-        {currentBuilding === 'south' && (
+        {showBuildings && currentBuilding === 'south' && (
           <SouthBuilding currentFloor={currentFloor} setCurrentFloor={setCurrentFloor} />
+        )}
+
+        {/* Champlain Buildings */}
+        {showChamplainBuildings && currentChamplainBuilding === 'champlain-annex' && (
+          <ChamplainAnnexBuilding currentFloor={currentChamplainFloor} setCurrentFloor={setCurrentChamplainFloor} />
         )}
       </div>
     </div>
